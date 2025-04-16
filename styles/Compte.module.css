@@ -1,6 +1,7 @@
 .wrapper {
   padding-left: 10%;
   padding-right: 10%;
+  margin-top: 8%;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -18,7 +19,6 @@
 }
 
 .profileSection {
-  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -212,7 +212,6 @@
 }
 
 .leftContent {
-  margin-top: 10%;
   flex: 1;
   max-width: 50%;
   align-items: center;
@@ -230,7 +229,6 @@
 }
 
 .rightContent {
-  margin-top: 60px;
   flex: 1;
   max-width: 50%;
   display: flex;
