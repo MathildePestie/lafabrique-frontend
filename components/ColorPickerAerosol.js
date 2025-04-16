@@ -20,7 +20,7 @@ function ColorPickerAerosol() {
   const [showLibrary, setShowLibrary] = useState(false);
 
   const handleValidatePalette = () => {
-    fetch("http://localhost:3000/orders/save-palette", {
+    fetch("https://lafabrique-backend.vercel.app/orders/save-palette", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ token: user.token, couleurs: palette }),

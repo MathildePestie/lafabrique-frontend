@@ -74,7 +74,7 @@ function Compte() {
   const handleSaveChanges = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/users/update-profile",
+        "https://lafabrique-backend.vercel.app/users/update-profile",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -109,7 +109,7 @@ function Compte() {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/users/update-password",
+        "https://lafabrique-backend.vercel.app/users/update-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -142,7 +142,7 @@ function Compte() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/orders", {
+    fetch("https://lafabrique-backend.vercel.app/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ token: user.token }),

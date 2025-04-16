@@ -24,7 +24,7 @@ function Checkout() {
       return;
     }
 
-    fetch("http://localhost:3000/orders/checkout", {
+    fetch("https://lafabrique-backend.vercel.app/orders/checkout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
