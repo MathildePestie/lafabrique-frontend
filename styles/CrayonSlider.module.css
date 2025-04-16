@@ -74,4 +74,22 @@
     width: 20px;
   }
   
+  @media screen and (max-width: 768px) {
+    .slider {
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .leftArrow,
+    .rightArrow {
+      display: none;
+    }
+  
+    .image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
   

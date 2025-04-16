@@ -352,3 +352,26 @@
 .deleteButton:hover {
   transform: scale(1.2);
 }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+    margin: auto;
+  }
+
+  .counters {
+    align-items: center;
+  }
+
+  .preview {
+    margin: 0 auto;
+  }
+
+  .addButton,
+  .libraryButton,
+  .validateButton,
+  .cartButton {
+    width: 100%;
+    text-align: center;
+  }
+}

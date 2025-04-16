@@ -35,7 +35,7 @@
   justify-content: space-between;
   align-items: center;
   width: 50%;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   padding: 25px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -66,4 +66,44 @@
 
 .rightArrow {
   right: 15%;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    width: 90%;
+    padding: 15px;
+  }
+
+  .image {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .légende {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .leftArrow,
+  .rightArrow {
+    display: none;
+  }
+
+  .cardsContainer {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cardsContainer::-webkit-scrollbar {
+    display: none; /* Masque la scrollbar sur iOS / Chrome */
+  }
+
+  .card {
+    scroll-snap-align: center;
+    width: 100vw
+  }
 }
