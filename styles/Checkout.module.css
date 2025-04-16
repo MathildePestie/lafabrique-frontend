@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.wrapper {
+  margin-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+}
+
+.left,
+.right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 10%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 12px;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #999;
+}
+
+.infos {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.line {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+  padding: 20px 0px;
+  line-height: 20px;
+}
+
+.infos2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.clearCartWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -20px;
+}
+
+.clearCart {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  transition: transform 0.2s ease;
+}
+
+.clearCart:hover {
+  transform: scale(1.1);
+}
+

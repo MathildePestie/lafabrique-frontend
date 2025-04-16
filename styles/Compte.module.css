@@ -1,0 +1,261 @@
+.wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.title {
+  margin-top: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-wrap: nowrap;
+}
+
+.profileSection {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nom {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 20%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  margin-top: 55%;
+}
+
+.nom2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 20%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  margin-top: 3%;
+}
+
+.line {
+  border-top: 1px solid #d9d9d9;
+  width: 125%;
+  padding: 20px 0px;
+  margin-top: 10%;
+  line-height: 20px;
+}
+
+.card {
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.profileInfo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 20%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+  text-wrap: nowrap;
+}
+
+.profileInfoCommande {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  text-wrap: nowrap;
+}
+
+.command {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 20%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+}
+
+.editInput {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.changesButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 100%;
+}
+
+.editPasswordButton {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  align-items: center;
+  margin-bottom: 10%;
+  border-radius: 10px;
+  padding: 10px;
+  width: 50%;
+  margin-right: 20px;
+}
+
+.editPasswordButton:hover {
+  transform: scale(1.05);
+}
+
+.editButton {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  margin-top: 26%;
+  margin-bottom: 5%;
+}
+
+.plusButton {
+  border: none;
+  background-color: transparent;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 55%;
+}
+
+.plusButton:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border: none;
+}
+
+.icon:hover {
+  transform: scale(1.15);
+}
+
+.loader {
+  width: 25px;
+  animation: spin 1s linear infinite;
+}
+
+.modal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftContent {
+  margin-top: 10%;
+  flex: 1;
+  max-width: 50%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rightContent {
+  margin-top: 60px;
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tryColors {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+
+.card2 {
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+  padding: 20px;
+  margin-bottom: 5%;
+}

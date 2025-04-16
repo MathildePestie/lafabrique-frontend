@@ -1,0 +1,354 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  margin: auto;
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.barContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.range {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  margin-top: 20px;
+}
+
+.addButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.addButton:hover {
+  transform: scale(1.1);
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.colorCard {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+}
+
+.libraryButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.libraryButton:hover {
+  transform: scale(1.1);
+}
+
+.bigCard {
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+  width: fit-content;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.bigCardTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-wrap: nowrap;
+  margin-bottom: 20px;
+  color: #333;
+  width: 100%;
+}
+
+.colorsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.colorBubble {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  transition: transform 0.2s ease;
+}
+
+.colorBubble:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.validateButton {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.validateButton:hover {
+  transform: scale(1.1);
+  background-color: #333;
+}
+
+.hueBar {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  appearance: none;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    magenta,
+    red
+  );
+  outline: none;
+  cursor: pointer;
+}
+
+.saturationBar {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.range {
+  width: 100%;
+  margin-top: 10px;
+}
+.range :global(input[type="range"]::-webkit-slider-thumb) {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.range :global(input[type="range"]::-moz-range-thumb) {
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.range :global(input[type="range"]) {
+  position: relative;
+}
+
+.range :global(input[type="range"])::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(var(--progress, 0%) - 10px); /* centrer le cercle */
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url('/images/thumb-black.svg') no-repeat center center;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sliderWrapper {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  margin-top: 20px;
+}
+
+.hiddenRange {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.hueGradient {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    magenta,
+    red
+  );
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  transition: left 0.1s ease-out;
+}
+
+.saturationGradient {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, black, white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.counters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  line-height: 0px;
+  margin-bottom: 10%;
+}
+
+.counter {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cartButton {
+  margin-bottom: 10%;
+  padding: 15px 30px;
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.cartButton:hover {
+  transform: scale(1.1);
+  background-color: #333;
+}
+
+.colorCardWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.deleteButton {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.deleteButton:hover {
+  transform: scale(1.2);
+}

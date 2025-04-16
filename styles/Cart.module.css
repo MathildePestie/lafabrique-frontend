@@ -1,0 +1,98 @@
+.wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.title {
+  margin-top: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.empty {
+  font-size: 20px;
+  font-weight: bold;
+  color: grey;
+}
+
+.infos {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 12px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 5%;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+}
+
+.type {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.infos {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.validateButton {
+  margin-top: 5%;
+  padding: 15px 30px;
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.validateButton:hover {
+  transform: scale(1.1);
+}
+
+.clearCartWrapper {
+  display: flex;
+  margin-left: 20%;
+  margin-bottom: -100px;
+  margin-top: 5%;
+}
+
+.clearCart {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  transition: transform 0.2s ease;
+}
+
+.clearCart:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,18 @@
+.palettePreview {
+  display: flex;
+  gap: 5px;
+}
+
+.colorSample {
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.colorSample:hover {
+  transform: scale(1.2);
+}
