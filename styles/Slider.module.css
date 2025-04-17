@@ -68,7 +68,7 @@
   right: 15%;
 }
 
-@media screen and (max-width: 1660px) {
+@media screen and (max-width: 1460px) {
   .content {
     flex-direction: column;
     width: 90%;
