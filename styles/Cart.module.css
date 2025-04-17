@@ -109,5 +109,9 @@
   .title {
     font-size: 30px;
   }
+
+  .clearCart {
+    padding-left: 35%;
+  }
 }
 

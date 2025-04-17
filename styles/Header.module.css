@@ -128,3 +128,50 @@
     margin: 8px 0;
   }
 }
+
+@media screen and (max-width: 756px) {
+  .wrapper {
+    padding: 0 5%;
+  }
+
+  .logo {
+    width: 120px;
+    margin-top: 40px;
+  }
+
+  .icon,
+  .iconM {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .leftIcons {
+    margin-top: 40px;
+  }
+
+  .icons {
+    margin-top: 40px;
+    gap: 10px;
+  }
+
+  .dropdownMenu {
+    top: 70px;
+    left: 10px;
+    padding: 8px 15px;
+  }
+
+  .dropdownMenu {
+    transition: all 0.3s ease;
+  }
+
+  .dropdownMenu p {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+}

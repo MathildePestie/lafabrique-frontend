@@ -129,6 +129,11 @@
     text-align: center;
   }
 
+  .colors {
+    justify-content: center;
+    align-items: center;
+  }
+
   .infos,
   .infos2 {
     font-size: 16px;
@@ -146,7 +151,7 @@
   }
 
   .clearCartWrapper {
-    justify-content: center;
+    justify-content: flex-end;
     margin-bottom: 0;
   }
 }
