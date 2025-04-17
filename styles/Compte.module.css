@@ -270,6 +270,12 @@
     width: 100%;
   }
 
+  .nom2 {
+    font-size: 20px;
+    text-align: center;
+    width: 40%;
+  }
+
   .title {
     font-size: 30px;
   }
@@ -295,6 +301,10 @@
   .card2 {
     width: 100%;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .plusButton {
