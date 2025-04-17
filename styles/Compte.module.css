@@ -339,3 +339,12 @@
     margin-top: 5%;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .nom2 {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
