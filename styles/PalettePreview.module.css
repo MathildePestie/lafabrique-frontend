@@ -1,6 +1,8 @@
 .palettePreview {
   display: flex;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .colorSample {

@@ -19,20 +19,24 @@ function ColorPicker() {
   const palettes = useSelector((state) => state.palette.value);
   const [showLibrary, setShowLibrary] = useState(false);
 
-  const handleValidatePalette = () => {
-    fetch("https://lafabrique-backend.vercel.app/orders/save-palette", {
+  const handleValidatePalette = async () => {
+    if (palette.length === 0) return;
+  
+    const response = await fetch("https://lafabrique-backend.vercel.app/users/save-palette", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ token: user.token, couleurs: palette }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.result) {
-          dispatch(savePalette(palette));
-          toast.success("Palette enregistrée avec succès !");
-          setPalette([]);
-        }
-      });
+      body: JSON.stringify({
+        token: localStorage.getItem("token"),
+        palette,
+      }),
+    });
+  
+    const data = await response.json();
+    if (data.result) {
+      toast.success("Palette enregistrée !");
+    } else {
+      toast.error("Erreur lors de l'enregistrement.");
+    }
   };
 
   const handleImportPalette = (colors) => {

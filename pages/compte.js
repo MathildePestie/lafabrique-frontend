@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import PasswordModal from "../components/PasswordModal";
 import { login } from "../reducers/user";
+import { setPalettes } from "../reducers/palette";
 import PalettePreview from "../components/PalettePreview";
 import PalettesModal from "../components/PalettesModal";
 
@@ -142,6 +143,20 @@ function Compte() {
   };
 
   useEffect(() => {
+    fetch("https://lafabrique-backend.vercel.app/users/get-palettes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token: user.token }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.result) {
+          dispatch(setPalettes(data.palettes)); // dispatch Redux si tu veux
+        }
+      });
+  }, []);
+
+  useEffect(() => {
     fetch("https://lafabrique-backend.vercel.app/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -156,6 +171,7 @@ function Compte() {
       });
   }, [user.token]);
   console.log("Nombre de commandes :", orders.length);
+
   return (
     <div>
       <Header />
