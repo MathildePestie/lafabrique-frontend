@@ -342,8 +342,7 @@
 
 @media screen and (max-width: 900px) {
   .nom2 {
-    font-size: 20px;
-    text-align: center;
+    font-size: 15px;
     padding: 10px;
   }
 }
