@@ -1,66 +1,59 @@
 import styles from "../styles/CrayonSlider.module.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
-function PeintureSlider() {
+function CrayonSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? data.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === data.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  const containerRef = useRef(null);
 
   const data = [
-    {
-      image: "/images/peinture-1.png",
-      title: "Peinture-1",
-    },
-    {
-      image: "/images/peinture-2.png",
-      title: "Peinture-2",
-    },
-    {
-      image: "/images/peinture-3.png",
-      title: "Peinture-3",
-    },
+    { image: "/images/peinture-1.png", title: "Peinture-1" },
+    { image: "/images/peinture-2.png", title: "Peinture-2" },
+    { image: "/images/peinture-3.png", title: "Peinture-3" },
   ];
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const handleScroll = () => {
+      if (!container) return;
+      const scrollLeft = container.scrollLeft;
+      const width = container.offsetWidth;
+      const index = Math.round(scrollLeft / width);
+      setCurrentIndex(index);
+    };
+
+    container.addEventListener("scroll", handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToIndex = (index) => {
+    const container = containerRef.current;
+    if (!container) return;
+    const width = container.offsetWidth;
+    container.scrollTo({ left: index * width, behavior: "smooth" });
+    setCurrentIndex(index);
+  };
 
   return (
     <div className={styles.slider}>
-      <button className={styles.leftArrow} onClick={handlePrev}>
-        <img
-          src="/images/flèche.png"
-          alt="précédent"
-          style={{ width: "50px" }}
-        />
-      </button>
-      <div className={styles.cardsContainer}>
+      <div className={styles.cardsContainer} ref={containerRef}>
         {data.map((card, index) => (
-          <div
-            key={index}
-            className={styles.card}
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
+          <div className={styles.card} key={index}>
             <img src={card.image} alt={card.title} className={styles.image} />
           </div>
         ))}
       </div>
 
-      <button className={styles.rightArrow} onClick={handleNext}>
-        <img
-          src="/images/flèche.png"
-          alt="suivant"
-          style={{ transform: "rotate(180deg)", width: "50px" }}
-        />
-      </button>
+      <div className={styles.dots}>
+        {data.map((_, index) => (
+          <span
+            key={index}
+            className={`${styles.dot} ${index === currentIndex ? styles.active : ""}`}
+            onClick={() => scrollToIndex(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
 
-export default PeintureSlider;
+export default CrayonSlider;

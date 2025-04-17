@@ -97,3 +97,17 @@
 .clearCart:hover {
   transform: scale(1.1);
 }
+
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+

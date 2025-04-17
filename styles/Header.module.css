@@ -82,13 +82,13 @@
   border-radius: 5px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .wrapper {
     padding: 0 5%;
   }
 
   .logo {
-    width: 120px;
+    width: 160px;
     margin-top: 40px;
   }
 
