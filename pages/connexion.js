@@ -4,6 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { login } from "../reducers/user";
 import styles from "../styles/Connexion.module.css";
 import { useRouter } from "next/router";
+import { resetPalette } from "../reducers/palette";
 
 function Connexion() {
   const dispatch = useDispatch();
@@ -44,6 +45,7 @@ function Connexion() {
 
           dispatch(login(userData));
           localStorage.setItem("token", data.newDoc.token);
+          dispatch(resetPalette());
 
           setFormData({ mail: "", password: "" });
           toast.success("Connexion réussie, bon retour parmi nous !");

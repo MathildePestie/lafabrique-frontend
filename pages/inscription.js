@@ -4,6 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { login } from "../reducers/user";
 import styles from "../styles/Insciption.module.css";
 import { useRouter } from "next/router";
+import { resetPalette } from "../reducers/palette";
 
 function Inscription() {
   const dispatch = useDispatch();
@@ -51,6 +52,7 @@ function Inscription() {
 
           dispatch(login(userData));
           localStorage.setItem("token", data.newDoc.token);
+          dispatch(resetPalette());
 
           toast.success("Inscription réussie, bienvenue chez La Fabrique !");
 
